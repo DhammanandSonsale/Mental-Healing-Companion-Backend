@@ -9,6 +9,8 @@ const dashboardRoutes = require('./routes/dashboardRoutes');
 const quizRoutes = require('./routes/quiz');
 const contentRoutes = require('./routes/content');
 
+const contactRoutes = require('./routes/contact');
+
 
 const app = express();
 
@@ -38,6 +40,9 @@ app.use('/api/dashboard', dashboardRoutes);
 
 app.use('/api/quiz', quizRoutes);
 app.use('/api/content', contentRoutes);
+
+app.use("/api/contact", contactRoutes);
+
 
 // Start server
 const PORT = process.env.PORT || 8080;
