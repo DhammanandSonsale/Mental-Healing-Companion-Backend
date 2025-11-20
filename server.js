@@ -35,12 +35,6 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 // Routes
-
-app.get('/test', (req, res) => {
-  res.send('Mental Health Backend is running');
-});
-
-
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/dashboard', dashboardRoutes);
 
